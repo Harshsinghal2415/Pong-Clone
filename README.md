@@ -29,10 +29,11 @@ A classic 2D Pong game built with C++17 and SFML, featuring two-player local mul
 **Just download and play:**
 
 1. Clone or download this repository
-2. Double-click `pong.exe` or `PLAY.bat`
+2. Double-click `PLAY.bat` to start the game
 3. That's it! The game runs immediately! 🎉
 
-> ℹ️ All required DLLs and assets are included. No installation needed!
+> ℹ️ All required DLLs and assets are included. No installation needed!  
+> ⚠️ **Important:** Always use `PLAY.bat` to launch the game (not `pong.exe` directly)
 
 ### 🛠️ Building from Source (Linux/macOS/Windows)
 
@@ -149,15 +150,17 @@ pong-clone/
 │   ├── Menu.h                # Menu class interface
 │   └── nlohmann/
 │       └── json.hpp          # JSON library (header-only)
+├── lib/
+│   ├── sfml-*.dll            # SFML runtime libraries
+│   └── openal32.dll          # Audio library
 ├── assets/
 │   ├── font.ttf              # Font file (included)
 │   ├── hit.wav               # Hit sound (included)
 │   ├── score.wav             # Score sound (included)
 │   └── profiles.json         # User profiles (auto-generated)
 ├── pong.exe                  # Game executable (Windows)
-├── *.dll                     # SFML & OpenAL runtime libraries
+├── PLAY.bat                  # Windows launcher (USE THIS!)
 ├── build.ps1                 # Windows build script
-├── PLAY.bat                  # Windows quick launch
 ├── Makefile                  # Linux/macOS build configuration
 ├── LICENSE                   # MIT License
 ├── .gitignore                # Git ignore rules
