@@ -1,0 +1,46 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Build directories
+obj/
+build/
+bin/
+
+# IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# SFML Library source (not needed, we include DLLs)
+SFML-*/
+SFML.zip
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional sound files (commented out - we include them for portable version)
+# assets/*.wav
+# assets/*.ogg
+# assets/*.mp3
+
+# Keep profiles.json template but ignore actual user data
+# Uncomment to ignore user profiles:
+# assets/profiles.json
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Backup files
+*.bak
+*.swp
+*.swo
