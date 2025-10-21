@@ -60,15 +60,10 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "Build successful! ✓" -ForegroundColor Green
     Write-Host ""
     
-    # Create lib directory if it doesn't exist
-    if (-not (Test-Path "lib")) {
-        New-Item -ItemType Directory -Name "lib" -Force | Out-Null
-    }
-    
-    # Copy SFML DLLs to lib folder if they exist
+    # Copy SFML DLLs if they exist
     $dllPath = Join-Path $SFMLPath "bin"
     if (Test-Path $dllPath) {
-        Write-Host "Copying SFML DLLs to lib folder..." -ForegroundColor Cyan
+        Write-Host "Copying SFML DLLs..." -ForegroundColor Cyan
         $dlls = @(
             "sfml-graphics-2.dll",
             "sfml-window-2.dll", 
@@ -79,15 +74,12 @@ if ($LASTEXITCODE -eq 0) {
         foreach ($dll in $dlls) {
             $dllFile = Join-Path $dllPath $dll
             if (Test-Path $dllFile) {
-                Copy-Item $dllFile -Destination "lib\" -Force
+                Copy-Item $dllFile -Destination "." -Force
                 Write-Host "  Copied: $dll" -ForegroundColor Gray
             }
         }
         Write-Host ""
     }
-    
-    # Add lib folder to PATH for running
-    $env:PATH = "$PWD\lib;$env:PATH"
     
     if ($Run) {
         Write-Host "Running game..." -ForegroundColor Cyan

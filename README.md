@@ -149,18 +149,17 @@ pong-clone/
 │   ├── Menu.h                # Menu class interface
 │   └── nlohmann/
 │       └── json.hpp          # JSON library (header-only)
-├── lib/
-│   ├── sfml-*.dll            # SFML runtime libraries
-│   └── openal32.dll          # Audio library
 ├── assets/
 │   ├── font.ttf              # Font file (included)
 │   ├── hit.wav               # Hit sound (included)
 │   ├── score.wav             # Score sound (included)
 │   └── profiles.json         # User profiles (auto-generated)
 ├── pong.exe                  # Game executable (Windows)
+├── *.dll                     # SFML & OpenAL runtime libraries
 ├── build.ps1                 # Windows build script
 ├── PLAY.bat                  # Windows quick launch
 ├── Makefile                  # Linux/macOS build configuration
+├── LICENSE                   # MIT License
 ├── .gitignore                # Git ignore rules
 └── README.md                 # This file
 ```
